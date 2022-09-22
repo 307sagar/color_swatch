@@ -1,0 +1,38 @@
+In this sample application, I have developed the following:
+- The nodejs backend component to expose the API for color swatch data 
+- The Reactjs front end component whcih renders the list of Swatch API data
+- Capabilities to render the color list, add colors, edit colors to provide extensibility to different users.
+- A separate color picker Reactjs based client side component to display the colors in HEX/RGB format (more formats can be added just by adding few snippets in App.js)
+
+==================================================================================================================
+
+Question : Have you designed the system in such a way to make it easy and straightforward to
+extend?
+
+Solution:
+In order to achieve extensibility, I have added features like adding edit/delete options for separate user instances.
+To achieve more of it, I can add features as below:
+- The extensibility on the web gives user an opportunity to customize their platform to the changing requirements and play around with the results.
+With the use of various extended CSS object models - like Paint API in this case. 
+It will allow us to render the colors in a better way when a user customises the metadata.
+
+- Also, just for a new user to be familiar with the application; the application is initialised with pre-filled color swatch.
+Later, the new users can add more colors and the paint API or any other specific js libraries can render the newly added colors.
+
+- The component based design pattern in order to extend the functionalities or to add more features.
+
+- The microservice pattern is usefule where the api sdk can be hosted and started separately. The backend, front end and other configurable services are maintained separately.
+This will help the service running at all time and it will help also scale the web-app in which the color swatches are to be included.
+
+======================================================================================================================
+
+Missing flow/features:
+
+1. In the color list, exisiting application has no feature to render the color. Need to add a paint library t parse the meatadata of each color type and display the color.
+2. In the color picker at bottom of page, The color type's metadata/composition is not linked with the API data. It is picking from a react-paint library.
+
+The above 2 functionalities can be achieved using js paint libraries and api integration of library data with the API data to reneder the colors respectively.
+
+
+
+
